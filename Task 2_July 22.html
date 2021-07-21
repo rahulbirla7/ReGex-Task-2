@@ -1,0 +1,51 @@
+<! #Task 1
+Reg. Id :   SIRSS2284
+Rahul Birla >
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Assignment-2 JS</title>
+        <style>
+            table,tr,td{
+                text-align: center;
+            }
+        </style>
+        <script>
+            function myFunction() {
+                let text = document.getElementById("text").value;
+                let word = document.getElementById("word").value;
+                let rword = document.getElementById("rword").value;
+                document.getElementById("para").innerHTML = "<b>Before Editing the Text:</b> " + text;
+                let edit = text.replaceAll(word, rword);
+                document.getElementById("epara").innerHTML = "<b>After Editing the Text:</b> " + edit;
+            }
+        </script>
+    </head>
+    <body>
+        <form id="form" action="#form" method="POST" onsubmit="myFunction(); return false;">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <h3>Enter Text for Editing</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea id="text" rows="10" cols="50"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Enter Word you want to replace:</td>
+                    <td><input type="text" id="word"></td>
+                </tr>
+                <tr>
+                    <td>Enter Word to be replaced with:</td>
+                    <td><input type="text" id="rword"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit"></td>
+                </tr>
+            </table>
+        </form>
+        <p id="para"></p>
+        <p id="epara"></p>
+    </body>
+</html>
